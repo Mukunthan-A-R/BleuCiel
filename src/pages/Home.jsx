@@ -5,6 +5,7 @@ import AddBannerScroller from '../components/HomePage/AddBannerScroller'
 import BestSellers from '../components/HomePage/BestSellers'
 import FeaturedProducts from '../components/HomePage/FeaturedProducts'
 import FeatureHighlights from '../components/HomePage/FeatureHighlights'
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -23,9 +24,7 @@ const Home = () => {
 
         <FeatureHighlights></FeatureHighlights>
         
-            <h1 class="text-3xl font-bold underline">
-            Hello world!
-            </h1>
+          <Footer></Footer>
     </div>
   )
 }
