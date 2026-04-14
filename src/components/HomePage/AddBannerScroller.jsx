@@ -30,7 +30,7 @@ export default function AddBannerScroller() {
         {banners.map((banner, index) => (
           <div
             key={index}
-            className="min-w-full h-[220px] md:h-[380px] flex items-center justify-center"
+            className="min-w-full h-55 md:h-95 flex items-center justify-center"
           >
             <img
               src={banner.image}

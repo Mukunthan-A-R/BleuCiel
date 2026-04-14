@@ -8,8 +8,11 @@ const Home = () => {
     <div>
         <TopBanner></TopBanner>
         <Header></Header>
-        <div className='px-5'>
+        <div className='w-full  flex items-center justify-center'>
+        <div className='px-5 max-w-6xl py-5'>
         <AddBannerScroller></AddBannerScroller>
+        </div>
+
         </div>
         <p>
             home page
