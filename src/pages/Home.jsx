@@ -7,13 +7,17 @@ import FeaturedProducts from "../components/HomePage/FeaturedProducts";
 import FeatureHighlights from "../components/HomePage/FeatureHighlights";
 import Footer from "../components/Footer/Footer";
 import ExploreProducts from "../components/HomePage/ExploreProducts";
+import CategoriesAccordian from "../components/HomePage/CategoriesAccordian";
 
 const Home = () => {
   return (
     <div>
       <TopBanner></TopBanner>
       <Header></Header>
-      <div className="w-full  flex items-center justify-center">
+      <div className="w-full flex justify-center">
+        <span className="hidden xl:block ">
+          <CategoriesAccordian></CategoriesAccordian>
+        </span>
         <div className="px-5 max-w-6xl py-5">
           <AddBannerScroller></AddBannerScroller>
         </div>

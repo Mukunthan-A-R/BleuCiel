@@ -1,60 +1,62 @@
 import { useState } from "react";
 import { Heart, Eye, Star } from "lucide-react";
+import watch from "../../assets/general/watch.png";
+import headphones from "../../assets/general/headphones.png";
 
 const products = [
   {
     id: 1,
     name: "Casual Jacket",
-    img: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Bugatti_Veyron_16.4_%E2%80%93_Frontansicht_%281%29%2C_5._April_2012%2C_D%C3%BCsseldorf.jpg",
+    img: watch,
     price: 260,
     rating: 5,
   },
   {
     id: 2,
     name: "Luxury Travel Bag",
-    img: "https://m.media-amazon.com/images/I/71vz71m5usL._AC_UY1000_.jpg",
+    img: watch,
     price: 960,
     rating: 4,
   },
   {
     id: 3,
     name: "RGB Liquid Cooler",
-    img: "/products/cooler.png",
+    img: watch,
     price: 160,
     rating: 4,
   },
   {
     id: 4,
     name: "Wooden Side Table",
-    img: "/products/table.png",
+    img: watch,
     price: 360,
     rating: 5,
   },
   {
     id: 5,
     name: "Running Shoes",
-    img: "/products/shoes.png",
+    img: watch,
     price: 120,
     rating: 4,
   },
   {
     id: 6,
     name: "Classic Watch",
-    img: "/products/watch.png",
+    img: watch,
     price: 220,
     rating: 5,
   },
   {
     id: 7,
     name: "Wireless Headphones",
-    img: "/products/headphones.png",
+    img: headphones,
     price: 180,
     rating: 4,
   },
   {
     id: 8,
     name: "Mechanical Keyboard",
-    img: "/products/keyboard.png",
+    img: watch,
     price: 140,
     rating: 4,
   },
