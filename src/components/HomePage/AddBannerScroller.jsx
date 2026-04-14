@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import iphoneImage from "../../assets/AdBanner/iphone.png"
+import AzusImage from "../../assets/AdBanner/azus.jpg"
 
 const banners = [
   { image: iphoneImage },
-  { image: iphoneImage },
+  { image: AzusImage },
   { image: iphoneImage },
 ]
 
