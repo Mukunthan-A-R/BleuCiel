@@ -19,7 +19,7 @@ export default function ProductDetails() {
   const sizes = ["XS", "S", "M", "L", "XL"];
 
   return (
-    <div className="bg-white min-h-screen py-10 px-4 md:px-10">
+    <div className="bg-white py-5 md:pt-10 px-4 md:px-10">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
         {/* LEFT SIDE IMAGES */}
         <div className="flex gap-4">
