@@ -42,7 +42,7 @@ export default function ProductDetails() {
             <img
               src={selectedImage}
               alt="product"
-              className="max-h-[420px] object-contain"
+              className="max-h-105 object-contain"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function ProductDetails() {
           <p className="text-2xl font-semibold">$192.00</p>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="text-gray-600 text-sm leading-relaxed border-b border-gray-500 pb-3">
             PlayStation 5 Controller Skin high quality vinyl with air channel
             adhesive for easy bubble free install & mess free removal.
           </p>
@@ -81,13 +81,13 @@ export default function ProductDetails() {
 
             <button
               onClick={() => setColor("red")}
-              className={`w-5 h-5 rounded-full bg-red-500 border
+              className={`w-5 h-5 rounded-full bg-red-500 border 
               ${color === "red" ? "ring-2 ring-black" : ""}`}
             />
 
             <button
               onClick={() => setColor("gray")}
-              className={`w-5 h-5 rounded-full bg-gray-400 border
+              className={`w-5 h-5 rounded-full bg-gray-400 border 
               ${color === "gray" ? "ring-2 ring-black" : ""}`}
             />
           </div>
@@ -101,7 +101,7 @@ export default function ProductDetails() {
                 <button
                   key={s}
                   onClick={() => setSize(s)}
-                  className={`px-3 py-1 border rounded-md text-sm
+                  className={`px-3 py-1 border border-gray-500 rounded-md text-xs font-medium
                   ${size === s ? "bg-red-500 text-white border-red-500" : ""}`}
                 >
                   {s}
@@ -113,7 +113,7 @@ export default function ProductDetails() {
           {/* Quantity + Buy */}
           <div className="flex items-center gap-4">
             {/* Quantity */}
-            <div className="flex border rounded-md overflow-hidden">
+            <div className="flex border border-gray-500 rounded-md overflow-hidden">
               <button
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 className="px-3 py-2 bg-gray-100"
@@ -137,13 +137,13 @@ export default function ProductDetails() {
             </button>
 
             {/* Wishlist */}
-            <button className="border rounded-md p-2">
+            <button className="border border-gray-500 rounded-md p-2">
               <Heart size={18} />
             </button>
           </div>
 
           {/* Delivery Box */}
-          <div className="border rounded-md divide-y">
+          <div className="border border-gray-500 rounded-md divide-y">
             <div className="flex items-start gap-4 p-4">
               <Truck className="mt-1" />
               <div>
@@ -153,7 +153,6 @@ export default function ProductDetails() {
                 </p>
               </div>
             </div>
-
             <div className="flex items-start gap-4 p-4">
               <RotateCcw className="mt-1" />
               <div>
