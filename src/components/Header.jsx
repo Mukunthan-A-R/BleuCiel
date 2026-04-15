@@ -1,4 +1,5 @@
 import { Search, Heart, ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -11,18 +12,18 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-10 text-base font-medium">
-          <a href="#" className="hover:text-gray-600">
+          <Link to="/" className="hover:text-gray-600">
             Home
-          </a>
-          <a href="#" className="hover:text-gray-600">
+          </Link>
+          <Link to="/contact" className="hover:text-gray-600">
             Contact
-          </a>
-          <a href="#" className="hover:text-gray-600">
+          </Link>
+          <Link to="/about" className="hover:text-gray-600">
             About
-          </a>
-          <a href="#" className="hover:text-gray-600">
+          </Link>
+          <Link to="/signup" className="hover:text-gray-600">
             Sign Up
-          </a>
+          </Link>
         </nav>
 
         {/* Right Section */}
