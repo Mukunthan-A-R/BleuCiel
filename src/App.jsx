@@ -5,6 +5,7 @@ import About from "./pages/About";
 import TopBanner from "./components/TopBanner";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Contact from "./pages/Contact";
+import Signup from "./pages/Signup";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/product-details" element={<ProductDetailPage />} />
         </Routes>
       </BrowserRouter>
