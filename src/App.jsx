@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import TopBanner from "./components/TopBanner";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/product-details" element={<ProductDetailPage />} />
         </Routes>
       </BrowserRouter>

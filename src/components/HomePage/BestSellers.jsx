@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Heart, Eye, Star } from "lucide-react";
 import watch from "../../assets/general/watch.png";
 import headphones from "../../assets/general/headphones.png";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -91,58 +92,60 @@ export default function BestSellers() {
             const isNewItem = expanded && index >= 4;
 
             return (
-              <div
-                key={p.id}
-                className={`group ${
-                  isNewItem ? "opacity-0 translate-y-4 animate-fadeIn" : ""
-                }`}
-                style={
-                  isNewItem
-                    ? {
-                        animationDelay: `${(index - 4) * 80}ms`,
-                        animationFillMode: "forwards",
-                      }
-                    : {}
-                }
-              >
-                {/* Image card */}
-                <div className="relative bg-gray-100 rounded-lg flex items-center justify-center h-56">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className="max-h-40 object-contain"
-                  />
+              <Link to="/product-details">
+                <div
+                  key={p.id}
+                  className={`group ${
+                    isNewItem ? "opacity-0 translate-y-4 animate-fadeIn" : ""
+                  }`}
+                  style={
+                    isNewItem
+                      ? {
+                          animationDelay: `${(index - 4) * 80}ms`,
+                          animationFillMode: "forwards",
+                        }
+                      : {}
+                  }
+                >
+                  {/* Image card */}
+                  <div className="relative bg-gray-100 rounded-lg flex items-center justify-center h-56">
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      className="max-h-40 object-contain"
+                    />
 
-                  {/* Action icons */}
-                  <div className="absolute right-3 top-3 flex flex-col gap-2">
-                    <button className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
-                      <Heart size={16} />
-                    </button>
-                    <button className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
-                      <Eye size={16} />
-                    </button>
+                    {/* Action icons */}
+                    <div className="absolute right-3 top-3 flex flex-col gap-2">
+                      <button className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
+                        <Heart size={16} />
+                      </button>
+                      <button className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
+                        <Eye size={16} />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Product Name */}
+                  <h3 className="mt-4 text-sm font-medium text-gray-900">
+                    {p.name}
+                  </h3>
+
+                  {/* Price */}
+                  <p className="text-red-500 mt-1 font-semibold">${p.price}</p>
+
+                  {/* Rating */}
+                  <div className="flex gap-1 mt-1">
+                    {[...Array(p.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        size={14}
+                        className="fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
                   </div>
                 </div>
-
-                {/* Product Name */}
-                <h3 className="mt-4 text-sm font-medium text-gray-900">
-                  {p.name}
-                </h3>
-
-                {/* Price */}
-                <p className="text-red-500 mt-1 font-semibold">${p.price}</p>
-
-                {/* Rating */}
-                <div className="flex gap-1 mt-1">
-                  {[...Array(p.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      size={14}
-                      className="fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-              </div>
+              </Link>
             );
           })}
         </div>

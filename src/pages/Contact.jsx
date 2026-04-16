@@ -2,14 +2,14 @@ import React from "react";
 import TopBanner from "../components/TopBanner";
 import Header from "../components/Header";
 
-const About = () => {
+const Contact = () => {
   return (
     <>
       <TopBanner></TopBanner>
       <Header></Header>
-      <div>About Page</div>
+      <div>Contact Page</div>
     </>
   );
 };
 
-export default About;
+export default Contact;
