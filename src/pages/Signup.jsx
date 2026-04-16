@@ -1,6 +1,7 @@
 import React from "react";
 import TopBanner from "../components/TopBanner";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
@@ -79,9 +80,11 @@ const Signup = () => {
               {/* Login Link */}
               <p className="text-center text-gray-500 text-sm">
                 Already have account?{" "}
-                <span className="text-black font-medium cursor-pointer">
-                  Log in
-                </span>
+                <Link to="/login">
+                  <span className="text-black font-medium cursor-pointer">
+                    Log in
+                  </span>
+                </Link>
               </p>
             </form>
           </div>

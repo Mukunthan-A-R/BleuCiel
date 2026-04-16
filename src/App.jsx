@@ -6,6 +6,7 @@ import TopBanner from "./components/TopBanner";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import Contact from "./pages/Contact";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/product-details" element={<ProductDetailPage />} />
         </Routes>
       </BrowserRouter>
