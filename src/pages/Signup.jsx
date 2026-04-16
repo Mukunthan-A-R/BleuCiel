@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TopBanner from "../components/TopBanner";
 import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
 
 const Signup = () => {
   return (
@@ -90,6 +91,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
