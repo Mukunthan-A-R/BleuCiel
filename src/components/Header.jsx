@@ -1,7 +1,21 @@
 import { Search, Heart, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(query);
+
+    if (!query.trim()) return;
+
+    navigate(`/search?q=${query}`);
+  };
+
   return (
     <header className="w-full border-b border-gray-300 bg-white">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-5 md:py-7">
@@ -30,12 +44,18 @@ export default function Header() {
         <div className="flex items-center gap-5 md:gap-7">
           {/* Search */}
           <div className="hidden sm:flex items-center bg-gray-100 px-5 py-3 rounded-md">
-            <input
-              type="text"
-              placeholder="What are you looking for?"
-              className="bg-transparent outline-none text-sm md:text-base w-40 md:w-64"
-            />
-            <Search size={20} className="text-gray-500" />
+            <form onSubmit={handleSearch} className="max-w-md mx-auto flex">
+              <input
+                type="text"
+                placeholder="What are you looking for?"
+                className="bg-transparent outline-none text-sm md:text-base w-40 md:w-64"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              <button type="submit">
+                <Search size={20} className="text-gray-500" />
+              </button>
+            </form>
           </div>
 
           {/* Icons */}
